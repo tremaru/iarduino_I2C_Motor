@@ -1,5 +1,5 @@
 //	Библиотека для работы с Trema-модулем джойстик, I2C-flash для Arduino: https://iarduino.ru/shop/Expansion-payments/dzhoystik-i2c---flash-trema-modul.html
-//  Версия: 1.1.4
+//  Версия: 1.1.5
 //  Последнюю версию библиотеки Вы можете скачать по ссылке: https://iarduino.ru/file/521.html
 //  Подробное описание функций бибилиотеки доступно по ссылке: https://wiki.iarduino.ru/page/joystick-i2c/
 //  Библиотека является собственностью интернет магазина iarduino.ru и может свободно использоваться и распространяться!
@@ -121,10 +121,10 @@ class iarduino_I2C_Motor{																													//
 		}																																	//
 	/**	Пользовательские функции **/																										//
 		#if defined(TwoWire_h) || defined(__ARDUINO_WIRE_IMPLEMENTATION__)																	//
-		bool				begin					(TwoWire* i=&Wire					){ selI2C->begin(i); return _begin(); }				//	Определяем функцию инициализации модуля								(Параметр:  объект для работы с аппаратной шиной I2C).
+		bool				begin					(TwoWire* i=&Wire					){ selI2C->init(i); return _begin(); }				//	Определяем функцию инициализации модуля								(Параметр:  объект для работы с аппаратной шиной I2C).
 		#endif																																//
 		#if defined(iarduino_I2C_Software_h)																								//
-		bool				begin					(SoftTwoWire* i						){ selI2C->begin(i); return _begin(); }				//	Определяем функцию инициализации модуля								(Параметр:  объект для работы с программной шиной I2C).
+		bool				begin					(SoftTwoWire* i						){ selI2C->init(i); return _begin(); }				//	Определяем функцию инициализации модуля								(Параметр:  объект для работы с программной шиной I2C).
 		#endif																																//
 		bool				reset					(void								);													//	Объявляем  функцию перезагрузки модуля								(Параметр:  отсутствует).
 		bool				changeAddress			(uint8_t NewAddress					);													//	Объявляем  функцию смены адреса модуля на шине I2C					(Параметр:  новый адрес модуля).
