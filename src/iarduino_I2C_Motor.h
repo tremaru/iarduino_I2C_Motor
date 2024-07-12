@@ -1,7 +1,16 @@
-//	Библиотека для работы с Trema-модулем джойстик, I2C-flash для Arduino: https://iarduino.ru/shop/Expansion-payments/dzhoystik-i2c---flash-trema-modul.html
-//  Версия: 1.1.5
-//  Последнюю версию библиотеки Вы можете скачать по ссылке: https://iarduino.ru/file/521.html
-//  Подробное описание функций бибилиотеки доступно по ссылке: https://wiki.iarduino.ru/page/joystick-i2c/
+//	Библиотека для работы с:
+//	-	Драйвер FLASH-I2C для мотора (подключается любой коллекторный мотор от 3В до 12В):  https://iarduino.ru/shop/Expansion-payments/drayver-motora-s-upravlyayuschim-kontrollerom-flash-i2c.html
+//	-	Мотор-редуктор без энкодера N20-100rpm   6V, с управляющим контроллером, FLASH-I2C: https://iarduino.ru/shop/Mehanika/motor-reduktor-bez-enkodera-n20-100rpm-12v-s-upravlyayuschim-kontrollerom-flash-i2c.html
+//	-	Мотор-редуктор без энкодера N20-300rpm   6V, с управляющим контроллером, FLASH-I2C: https://iarduino.ru/shop/Expansion-payments/motor-reduktor-bez-enkodera-n20-300rpm-6v-s-upravlyayuschim-kontrollerom-flash-i2c.html
+//	-	Мотор-редуктор без энкодера N20-500rpm   6V, с управляющим контроллером, FLASH-I2C: https://iarduino.ru/shop/Mehanika/N20-500rpm-6V.html
+//	-	Мотор-редуктор с энкодером  N20-50rpm    6V, с управляющим контроллером, FLASH-I2C: https://iarduino.ru/shop/Expansion-payments/n20-50rpm-6v-flash-i2c.html
+//	-	Мотор-редуктор с энкодером  N20-100rpm  12V, с управляющим контроллером, FLASH-I2C: https://iarduino.ru/shop/Mehanika/motor-reduktor-n20-500rpm-s-upravlyayuschim-kontrollerom-flash-i2c.html
+//	-	Мотор-редуктор с энкодером  N20-300rpm   6V, с управляющим контроллером, FLASH-I2C: https://iarduino.ru/shop/Expansion-payments/n20-300rpm-6v-flash-i2c.html
+//	-	Мотор-редуктор с энкодером  N20-1000rpm 12V, с управляющим контроллером, FLASH-I2C: https://iarduino.ru/shop/Mehanika/motor-reduktor-s-enkoderom-n20-1000rpm-12v-s-upravlyayuschim-kontrollerom-flash-i2c.html
+//  Версия: 1.1.6
+//  Последнюю версию библиотеки Вы можете скачать по ссылке: https://iarduino.ru/file/534.html
+//  Подробное описание функций бибилиотеки доступно по ссылке: https://wiki.iarduino.ru/page/motor-driver-i2c/
+//  Подробное описание настройки драйвера для работы с вашим мотором: https://wiki.iarduino.ru/page/motor-driver-controller-i2c/
 //  Библиотека является собственностью интернет магазина iarduino.ru и может свободно использоваться и распространяться!
 //  При публикации устройств или скетчей с использованием данной библиотеки, как целиком, так и её частей,
 //  в том числе и в некоммерческих целях, просим Вас опубликовать ссылку: http://iarduino.ru
