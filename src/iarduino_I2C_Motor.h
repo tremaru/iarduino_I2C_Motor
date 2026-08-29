@@ -7,7 +7,7 @@
 //	-	Мотор-редуктор с энкодером  N20-100rpm  12V, с управляющим контроллером, FLASH-I2C: https://iarduino.ru/shop/Mehanika/motor-reduktor-n20-500rpm-s-upravlyayuschim-kontrollerom-flash-i2c.html
 //	-	Мотор-редуктор с энкодером  N20-300rpm   6V, с управляющим контроллером, FLASH-I2C: https://iarduino.ru/shop/Expansion-payments/n20-300rpm-6v-flash-i2c.html
 //	-	Мотор-редуктор с энкодером  N20-1000rpm 12V, с управляющим контроллером, FLASH-I2C: https://iarduino.ru/shop/Mehanika/motor-reduktor-s-enkoderom-n20-1000rpm-12v-s-upravlyayuschim-kontrollerom-flash-i2c.html
-//  Версия: 1.1.7
+//  Версия: 1.1.8
 //  Последнюю версию библиотеки Вы можете скачать по ссылке: https://iarduino.ru/file/534.html
 //  Подробное описание функций бибилиотеки доступно по ссылке: https://wiki.iarduino.ru/page/motor-driver-i2c/
 //  Подробное описание настройки драйвера для работы с вашим мотором: https://wiki.iarduino.ru/page/motor-driver-controller-i2c/
@@ -28,7 +28,7 @@
 																																			//
 #include		"iarduino_I2C_Motor_I2C.h"																									//	Подключаем библиотеку выбора реализации шины I2C.
 																																			//
-#if defined(TwoWire_h) || defined(__ARDUINO_WIRE_IMPLEMENTATION__) || defined(__AVR_ATmega328__) || defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega1284P__) || defined(__AVR_ATmega2560__) || defined(ESP8266) || defined(ESP32) || defined(ARDUINO_ARCH_RP2040) || defined(RENESAS_CORTEX_M4) // Если подключена библиотека Wire или платы её поддерживают...
+#if defined(TwoWire_h) || defined(__ARDUINO_WIRE_IMPLEMENTATION__) || defined(__AVR_ATmega328__) || defined(__AVR_ATmega328P__) || defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega1284P__) || defined(__AVR_ATmega2560__) || defined(ESP8266) || defined(ESP32) || defined(ARDUINO_ARCH_RP2040) || defined(RENESAS_CORTEX_M4) // Если подключена библиотека Wire.h или платы её поддерживают...
 #include		<Wire.h>																													//	Разрешаем использовать библиотеку Wire в данной библиотеке.
 #endif																																		//
 #if defined( iarduino_I2C_Software_h )																										//	Если библиотека iarduino_I2C_Software подключена в скетче...
@@ -129,7 +129,7 @@ class iarduino_I2C_Motor{																													//
 							selI2C				=	new iarduino_I2C_Select;																//	Переопределяем указатель selI2C на объект производного класса iarduino_I2C_Select.
 		}																																	//
 	/**	Пользовательские функции **/																										//
-		#if defined(TwoWire_h) || defined(__ARDUINO_WIRE_IMPLEMENTATION__) || defined(__AVR_ATmega328__) || defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega1284P__) || defined(__AVR_ATmega2560__) || defined(ESP8266) || defined(ESP32) || defined(ARDUINO_ARCH_RP2040) || defined(RENESAS_CORTEX_M4) // Если подключена библиотека Wire или платы её поддерживают...
+		#if defined(TwoWire_h) || defined(__ARDUINO_WIRE_IMPLEMENTATION__) || defined(__AVR_ATmega328__) || defined(__AVR_ATmega328P__) || defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega1284P__) || defined(__AVR_ATmega2560__) || defined(ESP8266) || defined(ESP32) || defined(ARDUINO_ARCH_RP2040) || defined(RENESAS_CORTEX_M4) // Если подключена библиотека Wire.h или платы её поддерживают...
 		bool				begin					(TwoWire* i=&Wire					){ selI2C->init(i); return _begin(); }				//	Определяем функцию инициализации модуля								(Параметр:  объект для работы с аппаратной шиной I2C).
 		#endif																																//
 		#if defined(iarduino_I2C_Software_h)																								//
